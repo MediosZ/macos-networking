@@ -42,7 +42,8 @@ int main()
         return 1;
     }
     printf("Broadcasting status: %d \n", enable_broadcast);
-    // assert(enable_broadcast == true);
+    auto res = static_cast<bool>(enable_broadcast);
+    assert(res == true);
 
     // send a broadcast message
     struct sockaddr_in broadcast_address;
